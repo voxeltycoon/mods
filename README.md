@@ -18,4 +18,4 @@ Makes resource deposits never deplate.
 
 ![](https://github.com/voxeltycoon/mods/blob/master/OldSchoolStyleMod/preview.png?raw=true)
 
-Make the game older by 20 years thanks to nostalgic old school styled vehicles movement
+Make the game older by 20 years thanks to nostalgic old school styled vehicles movement.
