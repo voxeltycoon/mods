@@ -12,10 +12,10 @@ Source code for [**Creating your first script mod**](http://docs.voxeltycoon.xyz
 
 ![](https://github.com/voxeltycoon/mods/blob/master/InfiniteResourcesMod/preview.png?raw=true)
 
-Source code for the official **Infinite Resources** mod.
+Source code for the official **Infinite Resources** mod which makes resource deposits never deplate.
 
 ## Old School Style
 
 ![](https://github.com/voxeltycoon/mods/blob/master/OldSchoolStyleMod/preview.png?raw=true)
 
-Source code for the official **Old School Style** mod.
+Source code for the official **Old School Style** mod which makes the game older by 20 years.
