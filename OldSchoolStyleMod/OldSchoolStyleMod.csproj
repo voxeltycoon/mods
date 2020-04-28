@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,10 +6,10 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>C:\Users\maxim\AppData\Roaming\itch\apps\voxel-tycoon\VoxelTycoon_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Libs\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Users\maxim\AppData\Roaming\itch\apps\voxel-tycoon\VoxelTycoon_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\Libs\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 
