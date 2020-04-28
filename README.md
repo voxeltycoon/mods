@@ -12,7 +12,7 @@ Source code for [**Creating your first script mod**](http://docs.voxeltycoon.xyz
 
 ![](https://github.com/voxeltycoon/mods/blob/master/InfiniteResourcesMod/preview.png?raw=true)
 
-Makes resource deposits never deplate.
+Makes resource deposits never deplete.
 
 ## Old School Style mod
 
