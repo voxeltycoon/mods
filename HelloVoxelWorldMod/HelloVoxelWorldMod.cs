@@ -1,14 +1,13 @@
 ﻿using VoxelTycoon;
 using VoxelTycoon.Modding;
 using VoxelTycoon.Notifications;
-using VoxelTycoon.Serialization;
 using VoxelTycoon.UI;
 
 namespace HelloVoxelWorldMod
 {
-    public class HelloVoxelWorldMod : IMod
+    public class HelloVoxelWorldMod : Mod
     {
-        public void OnGameLoaded()
+        protected override void OnGameStarted()
         {
             // Maximum priority so we never miss it.
             var priority = NotificationPriority.Critical;
@@ -34,19 +33,10 @@ namespace HelloVoxelWorldMod
             NotificationManager.Current.Push(priority, color, title, message, action, icon);
         }
 
-        public void OnBeforeGameLoad()
+        protected override void OnGameStarting()
         {
             var notificationTypeId = "hello_voxel_world_mod/hello_world_notification_action".GetHashCode();
             NotificationManager.Current.RegisterNotificationAction<HelloVoxelWorldNotificationAction>(notificationTypeId);
-        }
-
-        public void Read(StateBinaryReader reader)
-        {
-        }
-
-        public void Write(StateBinaryWriter writer)
-        {
-           
         }
     }
 }

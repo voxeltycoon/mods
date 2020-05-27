@@ -6,24 +6,24 @@ using VoxelTycoon.UI;
 
 namespace OldSchoolStyleMod
 {
-    public class OldSchoolStyleMod : IMod
+    public class OldSchoolStyleMod : Mod
     {
-        public void OnBeforeGameLoad()
+        protected override void OnGameStarting()
         {
             OldSchoolStyleManager.Initialize();
         }
 
-        public void OnGameLoaded()
+        protected override void OnGameStarted()
         {
             Toolbar.Current.AddButton(FontIcon.Ketizoloto(I.Settings1), "Old school style settings", new ToolToolbarAction(() => new OldSchoolStyleModSettingsTool()));
         }
 
-        public void Read(StateBinaryReader reader)
+        protected override void Read(StateBinaryReader reader)
         {
             OldSchoolStyleManager.Current.Enabled = reader.ReadBool();
         }
 
-        public void Write(StateBinaryWriter writer)
+        protected override void Write(StateBinaryWriter writer)
         {
             writer.WriteBool(OldSchoolStyleManager.Current.Enabled);
         }

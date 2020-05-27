@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="pack.json">
+    <None Update="mod.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="preview.png">
