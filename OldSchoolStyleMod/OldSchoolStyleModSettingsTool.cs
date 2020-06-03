@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using VoxelTycoon;
 using VoxelTycoon.Game.UI;
 using VoxelTycoon.Tools;
 using VoxelTycoon.UI;
@@ -7,28 +8,27 @@ namespace OldSchoolStyleMod
 {
     public class OldSchoolStyleModSettingsTool : ITool
     {
-        private const KeyCode _toggleKey = KeyCode.Z;
-
-        private HotkeysUIItem _toggleHotkey;
+        private Hotkey _toggleHotkey = new Hotkey(KeyCode.Z);
+        private HotkeyPanelItem _toggleHotkeyPanelItem;
 
         public void Activate()
         {
-            _toggleHotkey = HotkeysUI.Current.Add(string.Empty, _toggleKey);
+            _toggleHotkeyPanelItem = HotkeyPanel.Current.Add(string.Empty).AddKey(_toggleHotkey);
         }
 
         public bool OnUpdate()
         {
-            if (ToolHelper.IsHotkeyDown(_toggleKey))
+            if (ToolHelper.IsHotkeyDown(_toggleHotkey))
                 OldSchoolStyleManager.Current.Enabled ^= true;
 
-            _toggleHotkey.SetCaption(OldSchoolStyleManager.Current.Enabled ? "Disable" : "Enable");
+            _toggleHotkeyPanelItem.SetCaption(OldSchoolStyleManager.Current.Enabled ? "Disable" : "Enable");
 
             return false;
         }
 
         public bool TryDeactivate()
         {
-            HotkeysUI.Current.Clear();
+            HotkeyPanel.Current.Clear();
 
             return true;
         }
