@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using VoxelTycoon;
 using VoxelTycoon.Deposits;
 using VoxelTycoon.Modding;
 using VoxelTycoon.UI;
@@ -26,8 +25,8 @@ namespace InfiniteResourcesMod
             var indicator = deposit.Indicator;
             if (indicator != null && _processedIndicators.Add(indicator))
             {
-                indicator.transform.GetChild(2).SetActive(false);
-                indicator.transform.GetChild(3).SetActive(false);
+                indicator.transform.GetChild(2).gameObject.SetActive(false);
+                indicator.transform.GetChild(3).gameObject.SetActive(false);
             }
         }
     }
