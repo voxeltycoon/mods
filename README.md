@@ -10,7 +10,7 @@ Modding documentation: [**docs.voxeltycoon.xyz**](https://docs.voxeltycoon.xyz)
 
 Source code for [**Creating your first script mod**](http://docs.voxeltycoon.xyz/guides/script-mods/creating-your-first-script-mod/) guide, with added example of creating custom notification action.
 
-## Settings Example mod
+## Settings Example sample
 
 Shows how to implement custom settings for your mod, so the player can tune them before starting a new game.
 
