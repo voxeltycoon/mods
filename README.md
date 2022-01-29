@@ -10,6 +10,10 @@ Modding documentation: [**docs.voxeltycoon.xyz**](https://docs.voxeltycoon.xyz)
 
 Source code for [**Creating your first script mod**](http://docs.voxeltycoon.xyz/guides/script-mods/creating-your-first-script-mod/) guide, with added example of creating custom notification action.
 
+## Settings Example mod
+
+Shows how to implement custom settings for your mod, so the player can tune them before starting a new game.
+
 ## Infinite Resources mod
 
 ![](https://github.com/voxeltycoon/mods/blob/master/InfiniteResourcesMod/preview.png?raw=true)
