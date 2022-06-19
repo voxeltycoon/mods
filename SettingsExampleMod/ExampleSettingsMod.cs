@@ -16,9 +16,8 @@ namespace SettingsExampleMod
         protected override void SetupSettingsControl(SettingsControl settingsControl, WorldSettings worldSettings)
         {
             settingsControl.AddToggle("Show dialog", null,
-                worldSettings.GetBool<ExampleSettingsMod>(ShowDialogKey),
-                () => worldSettings.SetBool<ExampleSettingsMod>(ShowDialogKey, true),
-                () => worldSettings.SetBool<ExampleSettingsMod>(ShowDialogKey, false));
+                () => worldSettings.GetBool<ExampleSettingsMod>(ShowDialogKey),
+                value => worldSettings.SetBool<ExampleSettingsMod>(ShowDialogKey, value));
         }
     }
 }
