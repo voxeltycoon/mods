@@ -16,6 +16,12 @@ namespace OldSchoolStyleMod
             _toggleHotkeyPanelItem = HotkeyPanel.Current.Add(string.Empty).AddKey(_toggleHotkey);
         }
 
+        public bool Deactivate(bool soft)
+        {
+            HotkeyPanel.Current.Clear();
+            return true;
+        }
+
         public bool OnUpdate()
         {
             if (ToolHelper.IsHotkeyDown(_toggleHotkey))
@@ -24,13 +30,6 @@ namespace OldSchoolStyleMod
             _toggleHotkeyPanelItem.SetCaption(OldSchoolStyleManager.Current.Enabled ? "Disable" : "Enable");
 
             return false;
-        }
-
-        public bool TryDeactivate()
-        {
-            HotkeyPanel.Current.Clear();
-
-            return true;
         }
     }
 }
