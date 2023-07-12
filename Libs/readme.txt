@@ -1,1 +1,1 @@
-Put Assembly-CSharp.dll and UnityEngine.CoreModule.dll in this directory.
+Put VoxelTycoon.dll and UnityEngine.CoreModule.dll in this directory.

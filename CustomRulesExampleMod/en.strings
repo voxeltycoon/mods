@@ -1,0 +1,7 @@
+{
+  "Items": {
+    "voxeltycoon_custom_rules_example/custom_rule_fixed_game_speed": "Fixed game speed",
+    "voxeltycoon_custom_rules_example/custom_rule_fixed_game_speed_description": "The clock ticks at a fixed pace, undeterred by any your attempts to manipulate time"
+  },
+  "LocaleUri": "base/en.locale"
+}
