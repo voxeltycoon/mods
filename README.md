@@ -4,7 +4,7 @@ This is a repository containing source code for mods and samples made by Voxel T
 
 Modding documentation: [**docs.voxeltycoon.xyz**](https://docs.voxeltycoon.xyz)
 
-> `VoxelTycoon.dll` and `UnityEngine.CoreModule.dll` are not included in the repository. They can be found in the `<game_directory>/VoxelTycoon_Data/Managed` folder and should be manually put into the `Lib` folder before building projects.
+> `VoxelTycoon.dll` and `UnityEngine.CoreModule.dll` are not included in the repository. Their actual location is automatically detected using the `Directory.Build.props` file if VoxelTycoon is installed in the default SteamLibrary location. If VoxelTycoon is installed at a different location, place a `VoxelTycoonInstallationDirectory.txt` in the repository directory and write the path to directory containing the `VoxelTycoon.exe` executable. E.g. `C:\Program Files (x86)\Steam\steamapps\common\VoxelTycoon`
 
 ## Hello Voxel World
 
