@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+  <PropertyGroup Label="VoxelTycoon">
+    <VoxelTycoonInstallationDirectoryOverrideFilePath>$([MSBuild]::GetPathOfFileAbove('VoxelTycoonInstallationDirectory.txt', '$(MSBuildProjectDirectory)'))</VoxelTycoonInstallationDirectoryOverrideFilePath>
+    <VoxelTycoonInstallationDirectory
+      Condition="Exists('$(VoxelTycoonInstallationDirectoryOverrideFilePath)')"
+    >$([System.IO.File]::ReadAllText('$(VoxelTycoonInstallationDirectoryOverrideFilePath)').Trim())</VoxelTycoonInstallationDirectory>
+    <VoxelTycoonInstallationDirectory Condition="!Exists('$(VoxelTycoonInstallationDirectoryOverrideFilePath)')">$([System.IO.Path]::GetFullPath('$(Registry:HKEY_CURRENT_USER\Software\Valve\Steam@SteamPath)\steamapps\common\VoxelTycoon'))</VoxelTycoonInstallationDirectory>
+    <VoxelTycoonManagedLibraryDirectory>$(VoxelTycoonInstallationDirectory)\VoxelTycoon_Data\Managed</VoxelTycoonManagedLibraryDirectory>
+  </PropertyGroup>
+</Project>

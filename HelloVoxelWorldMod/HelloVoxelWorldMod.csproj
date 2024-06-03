@@ -10,11 +10,11 @@
 
   <ItemGroup>
     <Reference Include="VoxelTycoon">
-      <HintPath>..\Libs\VoxelTycoon.dll</HintPath>
+      <HintPath>$(VoxelTycoonManagedLibraryDirectory)\VoxelTycoon.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\Libs\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(VoxelTycoonManagedLibraryDirectory)\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
