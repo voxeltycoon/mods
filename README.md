@@ -4,7 +4,7 @@ This is a repository containing source code for mods and samples made by Voxel T
 
 Modding documentation: [**docs.voxeltycoon.xyz**](https://docs.voxeltycoon.xyz)
 
-> `Assembly-CSharp.dll` and `UnityEngine.CoreModule.dll` are not included in the repository. They can be found in the `<game_directory>/VoxelTycoon_Data/Managed` folder and should be manually put into the `Lib` folder before building projects.
+> `VoxelTycoon.dll` and `UnityEngine.CoreModule.dll` are not included in the repository. They can be found in the `<game_directory>/VoxelTycoon_Data/Managed` folder and should be manually put into the `Lib` folder before building projects.
 
 ## Hello Voxel World
 
