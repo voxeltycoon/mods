@@ -16,13 +16,13 @@ Shows how to implement custom settings for your mod, so the player can tune them
 
 ## Infinite Resources
 
-![](https://github.com/voxeltycoon/mods/blob/master/InfiniteResourcesMod/preview.png?raw=true)
+![InfiniteResourcesMod](InfiniteResourcesMod/preview.png)
 
 Makes resource deposits never deplete.
 
 ## Old School Style
 
-![](https://github.com/voxeltycoon/mods/blob/master/OldSchoolStyleMod/preview.png?raw=true)
+![OldSchoolStyleMod](OldSchoolStyleMod/preview.png)
 
 Make the game older by 20 years thanks to nostalgic old school styled vehicles movement.
 
