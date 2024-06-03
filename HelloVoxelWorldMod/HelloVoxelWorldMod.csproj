@@ -19,8 +19,10 @@
     </Reference>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="set target=E:\dev\voxeltycoon\_Builds\local\windows\Content\vt_samples&#xD;&#xA;mkdir %25target%25&#xD;&#xA;copy $(TargetPath) %25target%25&#xD;&#xA;@echo { &quot;Title&quot;: &quot;Voxel Tycoon Moding Samples&quot;, &quot;Description&quot;: &quot;&quot; }&gt; %25target%25\pack.json" />
-  </Target>
+  <ItemGroup>
+    <None Update="mod.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
