@@ -4,7 +4,7 @@ This is a repository containing source code for mods and samples made by Voxel T
 
 Modding documentation: [**docs.voxeltycoon.xyz**](https://docs.voxeltycoon.xyz)
 
-> `Assembly-CSharp.dll` and `UnityEngine.CoreModule.dll` are not included in the repository. They can be found in the `<game_directory>/VoxelTycoon_Data/Managed` folder and should be manually put into the `Lib` folder before building projects.
+> `VoxelTycoon.dll` and `UnityEngine.CoreModule.dll` are not included in the repository. Their actual location is automatically detected using the `Directory.Build.props` file if VoxelTycoon is installed in the default SteamLibrary location. If VoxelTycoon is installed at a different location, place a `VoxelTycoonInstallationDirectory.txt` in the repository directory and write the path to directory containing the `VoxelTycoon.exe` executable. E.g. `C:\Program Files (x86)\Steam\steamapps\common\VoxelTycoon`
 
 ## Hello Voxel World
 
@@ -16,13 +16,13 @@ Shows how to implement custom settings for your mod, so the player can tune them
 
 ## Infinite Resources
 
-![](https://github.com/voxeltycoon/mods/blob/master/InfiniteResourcesMod/preview.png?raw=true)
+![InfiniteResourcesMod](InfiniteResourcesMod/preview.png)
 
 Makes resource deposits never deplete.
 
 ## Old School Style
 
-![](https://github.com/voxeltycoon/mods/blob/master/OldSchoolStyleMod/preview.png?raw=true)
+![OldSchoolStyleMod](OldSchoolStyleMod/preview.png)
 
 Make the game older by 20 years thanks to nostalgic old school styled vehicles movement.
 

@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>10</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -14,10 +15,12 @@
 
     <ItemGroup>
       <Reference Include="UnityEngine.CoreModule">
-        <HintPath>..\Libs\UnityEngine.CoreModule.dll</HintPath>
+        <HintPath>$(VoxelTycoonManagedLibraryDirectory)\UnityEngine.CoreModule.dll</HintPath>
+        <Private>false</Private>
       </Reference>
       <Reference Include="VoxelTycoon">
-        <HintPath>..\Libs\VoxelTycoon.dll</HintPath>
+        <HintPath>$(VoxelTycoonManagedLibraryDirectory)\VoxelTycoon.dll</HintPath>
+        <Private>false</Private>
       </Reference>
     </ItemGroup>
 

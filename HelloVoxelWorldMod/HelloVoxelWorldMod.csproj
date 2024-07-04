@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -9,18 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\Libs\Assembly-CSharp.dll</HintPath>
+    <Reference Include="VoxelTycoon">
+      <HintPath>$(VoxelTycoonManagedLibraryDirectory)\VoxelTycoon.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\Libs\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(VoxelTycoonManagedLibraryDirectory)\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="set target=E:\dev\voxeltycoon\_Builds\local\windows\Content\vt_samples&#xD;&#xA;mkdir %25target%25&#xD;&#xA;copy $(TargetPath) %25target%25&#xD;&#xA;@echo { &quot;Title&quot;: &quot;Voxel Tycoon Moding Samples&quot;, &quot;Description&quot;: &quot;&quot; }&gt; %25target%25\pack.json" />
-  </Target>
+  <ItemGroup>
+    <None Update="mod.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+  <Target 
+    Name="ErrorMissingVoxelTycoonInstallationDirectory" 
+    BeforeTargets="ResolveReferences"
+    Condition="!Exists('$(VoxelTycoonInstallationDirectory)')"
+  >
+    <Error
+      Condition="'$(VoxelTycoonInstallationDirectoryOverrideFilePath)' != '' and Exists('$(VoxelTycoonInstallationDirectoryOverrideFilePath)')"
+      File="$(VoxelTycoonInstallationDirectoryOverrideFilePath)"
+      Text="Specified VoxelTycoon directory path '$(VoxelTycoonInstallationDirectory)' does not exist."
+    />
+    <Error
+      Condition="'$(VoxelTycoonInstallationDirectoryOverrideFilePath)' == '' or !Exists('$(VoxelTycoonInstallationDirectoryOverrideFilePath)')"
+      Text="VoxelTycoon could not be detected automatically. Provide the VoxelTycoon directory path in a 'VoxelTycoonInstallationDirectory.txt' file."
+    />
+  </Target>
+</Project>
